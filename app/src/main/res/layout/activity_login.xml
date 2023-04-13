@@ -20,13 +20,12 @@
         android:id="@+id/tv_auular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Auular"
-        android:textSize="50sp"
-        android:textColor="#033180"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:fontFamily="sans-serif-medium">
-    </TextView>
+        android:fontFamily="sans-serif-medium"
+        android:text="Auular"
+        android:textColor="#033180"
+        android:textSize="50sp"></TextView>
 
     <EditText
         android:id="@+id/et_email"

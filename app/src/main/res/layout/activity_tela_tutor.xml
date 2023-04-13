@@ -6,4 +6,69 @@
     android:layout_height="match_parent"
     tools:context=".Tela_Tutor">
 
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/menu_lateral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="menu hamburguer"
+            android:textColor="@color/azul_padrao"
+            android:layout_margin="10sp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E aí, usuário!"
+            android:textColor="@color/azul_padrao"
+            android:layout_toRightOf="@+id/menu_lateral"
+            a
+            />
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:id="@+id/tv_auular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/app_name"
+            android:textColor="@color/azul_padrao"
+            android:textSize="50sp"></TextView>
+
+
+        <ImageView
+            android:id="@+id/iv_patinha"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:src="@mipmap/patinha"
+            android:layout_below="@+id/tv_auular"
+            android:layout_centerHorizontal="true">
+        </ImageView>
+
+
+
+
+
+    </RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
