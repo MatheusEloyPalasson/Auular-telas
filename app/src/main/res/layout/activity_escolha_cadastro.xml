@@ -19,4 +19,41 @@
       android:fontFamily="sans-serif-medium">
   </TextView>
 
+  <ImageView
+      android:id="@+id/iv_escolha_tutor"
+      android:layout_width="wrap_content"
+      android:layout_height="200dp"
+      android:layout_below="@id/tv_auular"
+      android:src="@mipmap/patinha"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="40dp">
+  </ImageView>
+
+  <ImageView
+      android:id="@+id/iv_escolha_empresa"
+      android:layout_width="wrap_content"
+      android:layout_height="200dp"
+      android:layout_below="@id/iv_escolha_tutor"
+      android:src="@mipmap/patinha"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="40dp">
+  </ImageView>
+
+  <TextView
+      android:id="@+id/tv_footer"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/iv_escolha_empresa"
+      android:padding="16dp"
+      android:text="Auular"
+      android:textSize="50sp"
+      android:textColor="#FFFF"
+      android:textAlignment="center"
+      android:background="@drawable/gradient"
+      android:fontFamily="sans-serif-medium"
+      android:layout_marginTop="36dp">
+  </TextView>
+
+
+
   </RelativeLayout>
