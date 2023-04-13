@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Auular</string>
+
+    <string name="button_cadastro">Cadastro</string>
+
+    <string name="button_login">Login</string>
 </resources>

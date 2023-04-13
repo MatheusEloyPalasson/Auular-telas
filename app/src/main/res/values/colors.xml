@@ -7,4 +7,20 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="azul_claro">#2D68CC</color>
+    <color name="azul_padrao">#0C45A6</color>
+    <color name="azul_escuro">#033180</color>
+
+
+    <color name="amarelo_claro">#FFDC87</color>
+    <color name="amarelo_padrao">#FDCF60</color>
+    <color name="amarelo_escuro">#D9AE48</color>
+
+    <color name="cinza_escuro">#262626</color>
+    <color name="preto">#000000</color>
+
+
+
+
 </resources>
