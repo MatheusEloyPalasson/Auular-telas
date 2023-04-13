@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_auular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Auular"
+        android:textSize="50sp"
+        android:textColor="#033180"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:fontFamily="sans-serif-medium">
+    </TextView>
+
+    <ImageView
+        android:id="@+id/iv_patinha"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/tv_auular"
+        android:src="@mipmap/patinha"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/tv_rodape"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_patinha"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Made by - Auular ©"
+        android:textColor="#033180"
+        android:textSize="20sp"></TextView>
+
+
+
+
+    
+
+</RelativeLayout>

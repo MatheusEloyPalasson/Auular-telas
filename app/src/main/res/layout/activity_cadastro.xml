@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Cadastro">
+
+    <ImageView
+        android:id="@+id/iv_patinha"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:src="@mipmap/patinha"
+        android:layout_marginTop="150dp"
+        android:layout_centerHorizontal="true">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/tv_auular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Auular"
+        android:textSize="50sp"
+        android:textColor="#033180"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:fontFamily="sans-serif-medium">
+    </TextView>
+
+    <EditText
+        android:id="@+id/et_usuário"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Usuário"
+        android:textSize="40sp"
+        android:layout_below="@id/iv_patinha"
+        android:layout_centerHorizontal="true">
+    </EditText>
+
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="40sp"
+        android:layout_below="@id/et_usuário"
+        android:layout_centerHorizontal="true">
+    </EditText>
+
+    <EditText
+        android:id="@+id/et_senha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Senha"
+        android:textSize="40sp"
+        android:layout_below="@id/et_email"
+        android:layout_centerHorizontal="true">
+    </EditText>
+
+
+    <TextView
+        android:id="@+id/tv_esqueceu_senha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Esqueceu sua senha?"
+        android:layout_below="@id/et_senha"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp">
+    </TextView>
+
+    <Button
+        android:id="@+id/bt_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_esqueceu_senha"
+        android:text="Cadastro"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="35dp"
+        android:backgroundTint="#033180">
+    </Button>
+
+    <TextView
+        android:id="@+id/tv_ou"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OU"
+        android:textSize="30sp"
+        android:layout_below="@id/bt_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textColor="#000000"
+        android:fontFamily="sans-serif-medium">
+    </TextView>
+
+    <Button
+        android:id="@+id/bt_google"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_ou"
+        android:text="Google"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="35dp"
+        android:backgroundTint="#033180">
+    </Button>
+
+</RelativeLayout>
