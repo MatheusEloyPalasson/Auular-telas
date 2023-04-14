@@ -76,9 +76,12 @@
                 android:id="@+id/search_bar"
                 android:layout_width="300sp"
                 android:layout_height="wrap_content"
-                android:hint="Pesquisar" />
+                android:hint="Pesquisar"/>
 
 
+           <TextView
+               android:id=
+               />
 
         </LinearLayout>
 
