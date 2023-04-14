@@ -8,50 +8,82 @@
     tools:context=".Escolha_Cadastro">
 
   <TextView
-      android:id="@+id/tv_auular"
+      android:id="@+id/tv_cadastro"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="Auular"
+      android:text="Cadastro"
       android:textSize="50sp"
       android:textColor="#033180"
       android:layout_centerHorizontal="true"
-      android:layout_marginTop="50dp"
+      android:layout_marginTop="30dp"
       android:fontFamily="sans-serif-medium">
   </TextView>
 
-  <ImageView
-      android:id="@+id/iv_escolha_tutor"
-      android:layout_width="wrap_content"
+  <ImageButton
+      android:id="@+id/ibt_escolha_tutor"
+      android:layout_width="200dp"
       android:layout_height="200dp"
-      android:layout_below="@id/tv_auular"
+      android:layout_below="@id/tv_cadastro"
       android:src="@mipmap/patinha"
       android:layout_centerHorizontal="true"
-      android:layout_marginTop="40dp">
-  </ImageView>
+      android:layout_marginTop="30dp"
+      android:background="@drawable/stroke"
+      android:padding="40dp">
+  </ImageButton>
 
-  <ImageView
-      android:id="@+id/iv_escolha_empresa"
+  <TextView
       android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/tv_tutor"
+      android:layout_below="@+id/ibt_escolha_tutor"
+      android:text="Tutor"
+      android:layout_centerHorizontal="true"
+      android:fontFamily="sans-serif"
+      android:textFontWeight="400"
+      android:textColor="@color/azul_escuro"
+      android:textSize="30sp">
+  </TextView>
+
+  <ImageButton
+      android:id="@+id/ibt_escolha_empresa"
+      android:layout_width="200dp"
       android:layout_height="200dp"
-      android:layout_below="@id/iv_escolha_tutor"
+      android:layout_below="@id/ibt_escolha_tutor"
       android:src="@mipmap/patinha"
       android:layout_centerHorizontal="true"
-      android:layout_marginTop="40dp">
-  </ImageView>
+      android:layout_marginTop="55dp"
+      android:background="@drawable/stroke"
+      android:padding="40dp">
+
+  </ImageButton>
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/tv_empresa"
+      android:layout_below="@+id/ibt_escolha_empresa"
+      android:text="Empresa"
+      android:layout_centerHorizontal="true"
+      android:fontFamily="sans-serif"
+      android:textFontWeight="400"
+      android:textColor="@color/azul_escuro"
+      android:textSize="30sp">
+  </TextView>
 
   <TextView
       android:id="@+id/tv_footer"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_below="@id/iv_escolha_empresa"
+      android:layout_below="@id/tv_empresa"
       android:padding="16dp"
       android:text="Auular"
-      android:textSize="50sp"
+      android:textSize="40sp"
       android:textColor="#FFFF"
       android:textAlignment="center"
       android:background="@drawable/gradient"
       android:fontFamily="sans-serif-medium"
-      android:layout_marginTop="36dp">
+      android:layout_marginTop="20dp"
+      android:layout_alignParentBottom="true">
   </TextView>
 
 
