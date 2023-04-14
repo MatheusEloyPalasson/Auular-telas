@@ -32,7 +32,7 @@
             android:text="E aí, usuário!"
             android:textColor="@color/azul_padrao"
             android:layout_toRightOf="@+id/menu_lateral"
-            a
+
             />
 
 
