@@ -7,7 +7,7 @@
     tools:context=".Tela_Tutor">
 
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -15,6 +15,7 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
+
 
 
         <TextView
@@ -26,22 +27,16 @@
             android:layout_margin="10sp"/>
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="E aí, usuário!"
-            android:textColor="@color/azul_padrao"
-            android:layout_toRightOf="@+id/menu_lateral"
-
-            />
-
-
-
-
-
-
+            <TextView
+                android:id="@+id/hello_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Olá, usuário!"
+                android:textColor="@color/azul_padrao"
+               android:layout_alignParentEnd="true"
+                android:layout_alignRight="@+id/menu_lateral"
+                android:layout_margin="10sp"/>
         </RelativeLayout>
-
 
 
         <TextView
@@ -64,6 +59,41 @@
             android:layout_below="@+id/tv_auular"
             android:layout_centerHorizontal="true">
         </ImageView>
+
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/search_bar"
+                android:layout_width="300sp"
+                android:layout_height="60sp"
+                android:layout_below="@+id/iv_patinha"
+                android:hint="@string/et_search"
+                />
+
+            <Button
+                android:id="@+id/bt_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+        </LinearLayout>
+
+
+
+</LinearLayout>
+
+
+
+
 
 
 
