@@ -157,6 +157,7 @@
                 android:layout_gravity="center"
                 android:src="@mipmap/patinha" />
 
+
             <ImageView
                 android:id="@+id/iv_rates4"
                 android:layout_width="20sp"
@@ -170,6 +171,7 @@
                 android:layout_height="20sp"
                 android:layout_gravity="center"
                 android:src="@mipmap/patinha" />
+
         </LinearLayout>
 
 
