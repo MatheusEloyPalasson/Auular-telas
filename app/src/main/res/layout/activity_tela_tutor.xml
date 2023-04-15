@@ -78,11 +78,6 @@
                 android:layout_height="wrap_content"
                 android:hint="Pesquisar"/>
 
-
-           <TextView
-               android:id=
-               />
-
         </LinearLayout>
 
 
