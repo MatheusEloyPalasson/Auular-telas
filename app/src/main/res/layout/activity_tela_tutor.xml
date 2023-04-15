@@ -19,26 +19,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
+            android:fontFamily="sans-serif-medium"
             android:text="menu"
-            android:textColor="@color/azul_escuro"
-            android:fontFamily="sans-serif-medium">
-        </TextView>
+            android:textColor="@color/azul_escuro"></TextView>
 
 
         <TextView
             android:id="@+id/hello_user"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="E aí, usuário!"
             android:layout_marginLeft="270sp"
-            android:textColor="@color/azul_escuro"
-            android:fontFamily="sans-serif-medium"/>
+            android:fontFamily="sans-serif-medium"
+            android:text="E aí, usuário!"
+            android:textColor="@color/azul_escuro" />
 
 
     </LinearLayout>
-
-
-
 
 
     <LinearLayout
@@ -46,28 +42,26 @@
         android:id="@+id/header_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_centerHorizontal="true"
         android:layout_below="@+id/menu"
-        android:gravity="center">
-
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="vertical">
 
 
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
             android:text="@string/app_name"
-            android:textSize="50sp"
             android:textColor="#033180"
-            android:fontFamily="sans-serif-medium"/>
+            android:textSize="50sp" />
 
         <ImageView
             android:id="@+id/iv_patinha"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:src="@mipmap/patinha">
-        </ImageView>
+            android:src="@mipmap/patinha"></ImageView>
 
     </LinearLayout>
 
@@ -98,21 +92,31 @@
     </LinearLayout>
 
 
-
+    <LinearLayout
+        android:id="@+id/info_hotel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search"
+        android:orientation="horizontal">
 
         <LinearLayout
-            android:id="@+id/info_hotel"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_below="@+id/search"
-            android:layout_marginTop="30sp">
+            android:layout_marginTop="30sp"
+            android:layout_marginBottom="20sp"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/name_hotel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hotel Sapcao - Jardins"/>
+                android:text="Hotel Sapcao - Jardins"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+
+
+                />
 
 
             <TextView
@@ -120,18 +124,62 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/name_hotel"
-                android:text="Jardins, São Paulo"/>
-
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/patinha"/>
-
-
-
+                android:text="Jardins, São Paulo" />
 
         </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginLeft="30sp">
+
+            <ImageView
+                android:id="@+id/iv_rates"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:layout_gravity="center"
+                android:src="@mipmap/patinha" />
+
+            <ImageView
+                android:id="@+id/iv_rates2"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:layout_gravity="center"
+                android:src="@mipmap/patinha" />
+
+            <ImageView
+                android:id="@+id/iv_rates3"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:layout_gravity="center"
+                android:src="@mipmap/patinha" />
+
+            <ImageView
+                android:id="@+id/iv_rates4"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:layout_gravity="center"
+                android:src="@mipmap/patinha" />
+
+            <ImageView
+                android:id="@+id/iv_rates5"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:layout_gravity="center"
+                android:src="@mipmap/patinha" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="200sp"
+        android:layout_height="200sp"
+        android:layout_below="@+id/info_hotel"
+        android:src="@mipmap/passeio" />
 
 
     <TextView
@@ -147,11 +195,6 @@
         android:textAlignment="center"
         android:textColor="#FFFF"
         android:textSize="40sp"></TextView>
-
-    
-
-
-
 
 
 </RelativeLayout>
