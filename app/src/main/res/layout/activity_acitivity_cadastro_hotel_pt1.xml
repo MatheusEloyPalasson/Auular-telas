@@ -6,41 +6,52 @@
     android:layout_height="match_parent"
     tools:context=".acitivity_cadastro_hotel_pt1">
 
-    <TextView
-        android:id="@+id/tv_auular"
-        android:layout_width="wrap_content"
+
+
+            <TextView
+                android:id="@+id/tv_auular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textSize="50sp"
+                android:textColor="@color/azul_escuro"
+                android:layout_centerHorizontal="true"
+
+                android:fontFamily="sans-serif-medium">
+            </TextView>
+
+
+            <TextView
+                android:id="@+id/tv_empresa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_empresa"
+                android:textSize="40sp"
+                android:textColor="@color/amarelo_escuro"
+                android:layout_below="@+id/tv_auular"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="sans-serif-medium">
+
+            </TextView>
+
+
+
+
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        android:textSize="50sp"
-        android:textColor="@color/azul_escuro"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:fontFamily="sans-serif-medium">
-    </TextView>
-
-
-    <TextView
-        android:id="@+id/tv_empresa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/tv_empresa"
-        android:textSize="40sp"
-        android:textColor="@color/amarelo_escuro"
-        android:layout_below="@+id/tv_auular"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:fontFamily="sans-serif-medium">
-
-    </TextView>
-
+        android:layout_below="@+id/tv_empresa">
 
     <LinearLayout
         android:id="@+id/ll_cadastro"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_below="@+id/tv_empresa"
-        android:layout_marginTop="30sp">
+        android:layout_marginTop="30sp"
+        android:padding="20sp">
 
         <TextView
             android:id="@+id/label_nome"
@@ -50,8 +61,9 @@
             android:textSize="20sp"/>
 
         <EditText
-            android:layout_width="300sp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             android:hint="@string/hint_nome"/>
 
         <TextView
@@ -62,8 +74,9 @@
             android:textSize="20sp"/>
 
         <EditText
-            android:layout_width="300sp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             android:hint="@string/hint_email"/>
 
         <TextView
@@ -74,46 +87,137 @@
             android:textSize="20sp"/>
 
         <EditText
-            android:layout_width="300sp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hint_senha"/>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/ll_cadastro_endereco_cep_estado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_below="@+id/ll_cadastro">
-
-        <TextView
-            android:id="@+id/label_cep"
+        <RelativeLayout
+            android:id="@+id/rl_cadastro_endereco_cep_bairro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/tv_cep"
+            android:orientation="horizontal"
+            android:layout_below="@+id/ll_cadastro"
+            >
+
+            <TextView
+                android:id="@+id/label_cep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_cep"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/cep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/label_cep"
+                android:hint="@string/hint_cep"/>
+
+
+            <TextView
+                android:id="@+id/label_bairro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_alignParentEnd="true"
+                android:text="@string/tv_bairro"
+                android:textSize="20sp"/>
+
+
+            <EditText
+                android:id="@+id/bairro"
+                android:layout_below="@+id/label_bairro"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_bairro"
+                />
+
+
+
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/label_logradouro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_logradouro"
             android:textSize="20sp"/>
 
         <EditText
-            android:layout_width="150sp"
+            android:id="@+id/logradouro"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_cep"/>
-
-        <androidx.appcompat.widget.AppCompatSpinner
-            android:id="@+id/label_estado"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@drawable/ic_arrow"
-            android:spinnerMode="dropdown"
-            android:text="@string/tv_estado"
-            android:textSize="20sp" />
-
-        <EditText
-            android:layout_width="50sp"
-            android:layout_height="wrap_content"
-
+            android:hint="@string/hint_logradouro"
             />
 
+
+        <RelativeLayout
+            android:id="@+id/ll_cadastro_cidade_estado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+        <TextView
+            android:id="@+id/label_cidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_cidade"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/cidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_cidade"
+            android:layout_below="@+id/label_cidade"
+            />
+
+            <TextView
+                android:id="@+id/label_estado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_estado"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="130sp"
+                android:textSize="20sp"/>
+
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinner_estado"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_arrow"
+                android:spinnerMode="dropdown"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/label_estado"
+                 />
+
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/button_avancar"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/azul_escuro"
+            android:textSize="20dp"
+
+            ></Button>
+
+
+
     </LinearLayout>
+
+
+
+</ScrollView>
+  
+
+
 
 </RelativeLayout>

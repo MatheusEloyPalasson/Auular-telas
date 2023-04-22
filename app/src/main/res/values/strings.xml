@@ -31,6 +31,7 @@
 
     <string name="app_name">Auular</string>
     <string name="button_cadastro">Cadastro</string>
+    <string name="button_avancar">Avançar</string>
     <string name="et_esqueceu">Esqueceu sua senha?</string>
     <string name="tv_email">Endereço de e-mail</string>
     <string name="hint_email">Digite seu email</string>
@@ -43,9 +44,13 @@
     <string name="tv_cep">CEP</string>
     <string name="hint_cep">00000-000</string>
     <string name="tv_estado">Estado</string>
+    <string name="hint_estado">Selecione o estado</string>
     <string name="tv_logradouro">Logradouro</string>
+    <string name="hint_logradouro">Digite o logradouro</string>
     <string name="tv_cidade">Cidade</string>
+    <string name="hint_cidade">Digite a sua cidade</string>
     <string name="tv_bairro">Bairro</string>
+    <string name="hint_bairro">Digite o bairro</string>
     <string name="tv_lotacao">Lotação Máxima</string>
     <string name="tv_servicos">Serviços</string>
     <string name="tv_animais_permitidos">Animais permitidos</string>
