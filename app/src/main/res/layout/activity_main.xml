@@ -14,7 +14,7 @@
         android:textSize="50sp"
         android:textColor="@color/azul_padrao"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="50dp"
         android:fontFamily="sans-serif-medium"
 
         >
@@ -25,10 +25,39 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_below="@id/tv_auular"
-        android:src="@mipmap/patinha"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp">
-    </ImageView>
+        android:layout_marginTop="50dp"
+        android:src="@mipmap/patinha"></ImageView>
+
+
+
+    <Button
+        android:id="@+id/bt_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_patinha"
+
+        android:text="@string/button_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="35dp"
+        android:backgroundTint="@color/azul_escuro">
+    </Button>
+
+    <Button
+        android:id="@+id/bt_cadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bt_login"
+        android:text="@string/button_cadastro"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="35dp"
+        android:backgroundTint="@color/azul_escuro">
+    </Button>
+
 
     <TextView
         android:id="@+id/tv_rodape"

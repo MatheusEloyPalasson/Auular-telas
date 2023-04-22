@@ -32,7 +32,7 @@
         android:id="@+id/et_email"
         android:layout_width="300sp"
         android:layout_height="wrap_content"
-        android:text="@string/et_email"
+        android:text="@string/tv_email"
         android:textSize="30sp"
         android:layout_below="@id/iv_patinha"
         android:layout_centerHorizontal="true">
@@ -70,7 +70,7 @@
         android:layout_marginTop="20dp"
         android:fontFamily="sans-serif-medium"
         android:textSize="35dp"
-        android:backgroundTint="#033180">
+        android:backgroundTint="@color/azul_escuro">
     </Button>
 
     <TextView
