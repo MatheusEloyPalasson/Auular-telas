@@ -38,11 +38,12 @@
         android:layout_centerHorizontal="true">
     </EditText>
 
+
     <EditText
         android:id="@+id/et_email"
         android:layout_width="300sp"
         android:layout_height="wrap_content"
-        android:text="@string/hint_email"
+        android:text="@string/tv_email"
         android:textSize="20sp"
         android:layout_below="@id/et_usuário"
         >

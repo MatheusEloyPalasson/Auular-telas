@@ -18,6 +18,9 @@
         android:theme="@style/Theme.Auular"
         tools:targetApi="31">
         <activity
+            android:name=".SpinnerEstado"
+            android:exported="false" />
+        <activity
             android:name=".acitivity_cadastro_hotel_pt1"
             android:exported="false" />
         <activity

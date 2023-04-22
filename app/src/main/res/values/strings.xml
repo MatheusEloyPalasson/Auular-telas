@@ -1,16 +1,47 @@
 <resources>
+    <string-array name="sg_estados">
+        <item>AC</item>
+        <item>AL</item>
+        <item>AP</item>
+        <item>AM</item>
+        <item>BA</item>
+        <item>CE</item>
+        <item>DF</item>
+        <item>ES</item>
+        <item>GO</item>
+        <item>MA</item>
+        <item>MT</item>
+        <item>MS</item>
+        <item>MG</item>
+        <item>PA</item>
+        <item>PB</item>
+        <item>PR</item>
+        <item>PE</item>
+        <item>PI</item>
+        <item>RR</item>
+        <item>RO</item>
+        <item>RJ</item>
+        <item>RN</item>
+        <item>RS</item>
+        <item>SC</item>
+        <item>SP</item>
+        <item>SE</item>
+        <item>TO</item>
+    </string-array>
+
     <string name="app_name">Auular</string>
-
-
     <string name="button_cadastro">Cadastro</string>
     <string name="et_esqueceu">Esqueceu sua senha?</string>
-    <string name="hint_email">Endereço de e-mail</string>
+    <string name="tv_email">Endereço de e-mail</string>
+    <string name="hint_email">Digite seu email</string>
     <string name="et_senha">Senha</string>
+    <string name="hint_senha">Digite sua senha</string>
     <string name="tv_tutor">Tutor</string>
     <string name="tv_empresa">Empresa</string>
     <string name="tv_nome">Nome</string>
     <string name="hint_nome">Digite o nome do local</string>
     <string name="tv_cep">CEP</string>
+    <string name="hint_cep">00000-000</string>
     <string name="tv_estado">Estado</string>
     <string name="tv_logradouro">Logradouro</string>
     <string name="tv_cidade">Cidade</string>
@@ -21,7 +52,6 @@
     <string name="tv_animais_imagens">Insira imagens de seu estabelecimento para mostrar aos seus novos clientes! (Formato PNG ou JPG)</string>
     <string name="tv_manter_conectado">Manter conectado neste dispositivo</string>
     <string name="tv_animais_deseja_email">Desejo receber conteúdos e promoções via e-mail</string>
-
 
 
     <string name="button_login">Login</string>
@@ -37,6 +67,8 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+
+
 
 
     <string name="mapbox_access_token">sk.eyJ1IjoiZ3Nzb3V6YSIsImEiOiJjbGdoYWNodWIwMWNtM2dsbHRpMjAzYzVlIn0.-bULwyE9axLpmow4rzuYJA</string>

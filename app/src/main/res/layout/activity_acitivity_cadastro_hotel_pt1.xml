@@ -58,33 +58,61 @@
             android:id="@+id/label_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/tv_nome"
+            android:text="@string/tv_email"
             android:textSize="20sp"/>
 
         <EditText
             android:layout_width="300sp"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_nome"/>
+            android:hint="@string/hint_email"/>
 
         <TextView
             android:id="@+id/label_senha"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/tv_nome"
+            android:text="@string/et_senha"
             android:textSize="20sp"/>
 
         <EditText
             android:layout_width="300sp"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_nome"/>
+            android:hint="@string/hint_senha"/>
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/ll_cadastro_endereco"
+        android:id="@+id/ll_cadastro_endereco_cep_estado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_below="@+id/ll_cadastro">
+
+        <TextView
+            android:id="@+id/label_cep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_cep"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:layout_width="150sp"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_cep"/>
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/label_estado"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_arrow"
+            android:spinnerMode="dropdown"
+            android:text="@string/tv_estado"
+            android:textSize="20sp" />
+
+        <EditText
+            android:layout_width="50sp"
+            android:layout_height="wrap_content"
+
+            />
 
     </LinearLayout>
 
