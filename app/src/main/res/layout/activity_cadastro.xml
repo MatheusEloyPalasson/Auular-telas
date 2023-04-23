@@ -7,11 +7,11 @@
     tools:context=".Cadastro">
 
     <ImageView
-        android:id="@+id/iv_patinha"
+        android:id="@+id/iv_tutor"
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:src="@mipmap/patinha"
-        android:layout_marginTop="150dp"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/tutor"
+        android:layout_marginTop="100dp"
         android:layout_centerHorizontal="true">
     </ImageView>
 
@@ -23,60 +23,105 @@
         android:textSize="50sp"
         android:textColor="#033180"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
         android:fontFamily="sans-serif-medium">
     </TextView>
 
     <TextView
         android:id="@+id/et_usuário"
-        android:layout_width="200sp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tv_tutor"
         android:textColor="@color/amarelo_escuro"
         android:textSize="40sp"
-        android:layout_below="@id/iv_patinha"
+        android:layout_below="@id/iv_tutor"
         android:layout_centerHorizontal="true">
     </TextView>
 
+    <TextView
+        android:id="@+id/label_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_usuário"
+        android:text="@string/tv_email">
+
+    </TextView>
 
     <EditText
         android:id="@+id/et_email"
         android:layout_width="300sp"
         android:layout_height="wrap_content"
-        android:hint="@string/tv_email"
+        android:hint="@string/hint_email"
         android:textSize="20sp"
-        android:layout_below="@id/et_usuário"
+        android:layout_below="@id/label_email"
         >
     </EditText>
+
+    <TextView
+        android:id="@+id/label_senha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_email"
+        android:text="@string/et_senha">
+
+    </TextView>
 
     <EditText
         android:id="@+id/et_senha"
         android:layout_width="300sp"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
-        android:hint="@string/et_senha"
+        android:hint="@string/hint_senha"
         android:textSize="20sp"
-        android:layout_below="@id/et_email"
+        android:layout_below="@id/label_senha"
+        >
+    </EditText>
+
+    <TextView
+        android:id="@+id/label_nome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_senha"
+        android:text="@string/et_nome_tutor">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/et_nome"
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_nome_tutor"
+        android:textSize="20sp"
+        android:layout_below="@id/label_nome"
         >
     </EditText>
 
 
     <TextView
-        android:id="@+id/tv_esqueceu_senha"
-        android:layout_width="wrap_content"
+        android:id="@+id/label_documento"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/et_esqueceu"
-        android:layout_below="@id/et_senha"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"
-        android:textSize="20sp">
+        android:layout_below="@id/et_nome"
+        android:text="@string/tv_documento_tutor">
+
     </TextView>
+
+    <EditText
+        android:id="@+id/et_documento"
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_documento_tutor"
+        android:textSize="20sp"
+        android:layout_below="@id/label_documento"
+        >
+    </EditText>
+
+
 
     <Button
         android:id="@+id/bt_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tv_esqueceu_senha"
+        android:layout_below="@id/et_documento"
         android:text="@string/button_cadastro"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"

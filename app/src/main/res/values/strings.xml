@@ -1,4 +1,6 @@
 <resources>
+
+    <!-- string arrays !-->
     <string-array name="sg_estados">
         <item>AC</item>
         <item>AL</item>
@@ -29,28 +31,41 @@
         <item>TO</item>
     </string-array>
 
+
+    <!-- Hint !-->
+
     <string name="app_name">Auular</string>
-    <string name="button_cadastro">Cadastro</string>
-    <string name="button_avancar">Avançar</string>
-    <string name="et_esqueceu">Esqueceu sua senha?</string>
-    <string name="tv_email">Endereço de e-mail</string>
-    <string name="hint_email">Digite seu email</string>
-    <string name="et_senha">Senha</string>
+    <string name="hint_documento_tutor">000.000.000-00</string>
+    <string name="hint_documento_empresa">00.000.000/0000-00</string>
     <string name="hint_senha">Digite sua senha</string>
+    <string name="hint_nome_tutor">Insira seu nome aqui</string>
+    <string name="hint_email">Digite seu email</string>
+    <string name="hint_nome">Digite o nome do local</string>
+    <string name="hint_cep">00000-000</string>
+    <string name="hint_estado">Selecione o estado</string>
+    <string name="hint_logradouro">Digite o logradouro</string>
+    <string name="hint_cidade">Digite a sua cidade</string>
+    <string name="hint_bairro">Digite o bairro</string>
+
+
+    <!-- EditText !-->
+    <string name="et_search">Pesquisar</string>
+    <string name="et_senha">Senha</string>
+    <string name="et_esqueceu">Esqueceu sua senha?</string>
+    <string name="et_nome_tutor">Nome</string>
+
+    <!-- TextView !-->
+    <string name="tv_email">Endereço de e-mail</string>
+    <string name="tv_documento_tutor">CPF</string>
+    <string name="tv_documento_empresa">CNPJ</string>
     <string name="tv_tutor">Tutor</string>
     <string name="tv_empresa">Empresa</string>
     <string name="tv_nome">Nome</string>
-    <string name="hint_nome">Digite o nome do local</string>
     <string name="tv_cep">CEP</string>
-    <string name="hint_cep">00000-000</string>
     <string name="tv_estado">Estado</string>
-    <string name="hint_estado">Selecione o estado</string>
     <string name="tv_logradouro">Logradouro</string>
-    <string name="hint_logradouro">Digite o logradouro</string>
     <string name="tv_cidade">Cidade</string>
-    <string name="hint_cidade">Digite a sua cidade</string>
     <string name="tv_bairro">Bairro</string>
-    <string name="hint_bairro">Digite o bairro</string>
     <string name="tv_lotacao">Lotação Máxima</string>
     <string name="tv_servicos">Serviços</string>
     <string name="tv_animais_permitidos">Animais permitidos</string>
@@ -60,8 +75,13 @@
     <string name="tv_by_auular">Made by - Auular ©</string>
 
 
+    <!-- Button !-->
+    <string name="button_cadastro">Cadastro</string>
+    <string name="button_cadastrar">Cadastrar</string>
     <string name="button_login">Login</string>
-    <string name="et_search">Pesquisar</string>
+    <string name="button_avancar">Avançar</string>
+
+
     <string name="title_activity_home_tutor">home_tutor</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
