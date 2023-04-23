@@ -32,7 +32,7 @@
 
 
     <Button
-        android:id="@+id/bt_login"
+        android:id="@+id/bt_login_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/iv_patinha"

@@ -27,23 +27,23 @@
         android:fontFamily="sans-serif-medium">
     </TextView>
 
-    <EditText
+    <TextView
         android:id="@+id/et_usuário"
         android:layout_width="200sp"
         android:layout_height="wrap_content"
-        android:text="@string/tv_empresa"
+        android:text="@string/tv_tutor"
         android:textColor="@color/amarelo_escuro"
         android:textSize="40sp"
         android:layout_below="@id/iv_patinha"
         android:layout_centerHorizontal="true">
-    </EditText>
+    </TextView>
 
 
     <EditText
         android:id="@+id/et_email"
         android:layout_width="300sp"
         android:layout_height="wrap_content"
-        android:text="@string/tv_email"
+        android:hint="@string/tv_email"
         android:textSize="20sp"
         android:layout_below="@id/et_usuário"
         >
@@ -53,7 +53,8 @@
         android:id="@+id/et_senha"
         android:layout_width="300sp"
         android:layout_height="wrap_content"
-        android:text="@string/et_senha"
+        android:inputType="textPassword"
+        android:hint="@string/et_senha"
         android:textSize="20sp"
         android:layout_below="@id/et_email"
         >
@@ -64,7 +65,7 @@
         android:id="@+id/tv_esqueceu_senha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/et_esqueceu"
+        android:hint="@string/et_esqueceu"
         android:layout_below="@id/et_senha"
         android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"

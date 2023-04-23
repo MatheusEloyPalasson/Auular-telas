@@ -32,7 +32,7 @@
         android:id="@+id/et_email"
         android:layout_width="300sp"
         android:layout_height="wrap_content"
-        android:text="@string/tv_email"
+        android:hint="@string/tv_email"
         android:textSize="30sp"
         android:layout_below="@id/iv_patinha"
         android:layout_centerHorizontal="true">
@@ -42,7 +42,8 @@
         android:id="@+id/et_senha"
         android:layout_width="300sp"
         android:layout_height="wrap_content"
-        android:text="Senha"
+        android:hint="Senha"
+        android:inputType="textPassword"
         android:textSize="30sp"
         android:layout_below="@id/et_email"
         android:layout_centerHorizontal="true"
