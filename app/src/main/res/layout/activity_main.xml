@@ -61,19 +61,20 @@
 
     <TextView
         android:id="@+id/tv_rodape"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/iv_patinha"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="130dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="200dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Made by - Auular ©"
+        android:text="@string/tv_by_auular"
         android:textColor="#033180"
-        android:textSize="20sp"></TextView>
+        android:textSize="20sp"/>
 
 
 
 
-    
+
+
 
 </RelativeLayout>

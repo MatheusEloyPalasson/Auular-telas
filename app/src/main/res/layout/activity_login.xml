@@ -100,6 +100,19 @@
         android:backgroundTint="#033180">
     </Button>
 
+    <TextView
+        android:id="@+id/tv_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/gradient"
+        android:fontFamily="sans-serif-medium"
+        android:padding="16dp"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textColor="#FFFF"
+        android:textSize="40sp"></TextView>
 
 
 </RelativeLayout>
