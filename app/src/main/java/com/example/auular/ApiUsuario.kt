@@ -1,5 +1,6 @@
 package com.example.auular;
 
+import com.example.auular.domain.PetTutor
 import java.util.List;
 
 import retrofit2.Call;

@@ -1,4 +1,4 @@
-package com.example.auular
+package com.example.auular.domain
 
 import com.google.gson.annotations.SerializedName
 
