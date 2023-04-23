@@ -21,7 +21,7 @@
             android:name=".SpinnerEstado"
             android:exported="false" />
         <activity
-            android:name=".acitivity_cadastro_hotel_pt1"
+            android:name=".CadastroHotelPt1"
             android:exported="false" />
         <activity
             android:name=".home_tutor"
