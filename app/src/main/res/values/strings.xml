@@ -46,6 +46,7 @@
     <string name="hint_logradouro">Digite o logradouro</string>
     <string name="hint_cidade">Digite a sua cidade</string>
     <string name="hint_bairro">Digite o bairro</string>
+    <string name="hint_telefone">Digite o telefone</string>
 
 
     <!-- EditText !-->
@@ -54,7 +55,9 @@
     <string name="et_esqueceu">Esqueceu sua senha?</string>
     <string name="et_nome_tutor">Nome</string>
 
+
     <!-- TextView !-->
+    <string name="tv_telefone">Telefone</string>
     <string name="tv_email">Endereço de e-mail</string>
     <string name="tv_documento_tutor">CPF</string>
     <string name="tv_documento_empresa">CNPJ</string>

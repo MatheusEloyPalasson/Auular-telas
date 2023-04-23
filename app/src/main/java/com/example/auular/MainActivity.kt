@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        val bt_cadastro = findViewById<Button>(R.id.bt_cadastro);
+        val bt_cadastro = findViewById<Button>(R.id.bt_cadastro_home);
         bt_cadastro.setOnClickListener {
             val intent = Intent(this, Escolha_Cadastro::class.java)
             startActivity(intent);
