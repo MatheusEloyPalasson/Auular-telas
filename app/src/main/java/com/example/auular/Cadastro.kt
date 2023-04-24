@@ -31,12 +31,12 @@ class Cadastro : AppCompatActivity() {
 
         if (isEmailValid && isPasswordValid){
            buttonCadastro.setOnClickListener {
-               val intent = Intent(this, Tela_Tutor::class.java)
+               val intent = Intent(this, Login::class.java)
                startActivity(intent);
            }
         }
 
-        
+
 
     }
 }
