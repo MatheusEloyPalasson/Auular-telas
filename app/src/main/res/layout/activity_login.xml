@@ -68,6 +68,7 @@
         android:layout_below="@id/tv_esqueceu_senha"
         android:text="@string/button_login"
         android:layout_centerHorizontal="true"
+        android:onClick="logarTutor"
         android:layout_marginTop="20dp"
         android:fontFamily="sans-serif-medium"
         android:textSize="35dp"
@@ -75,30 +76,16 @@
     </Button>
 
     <TextView
-        android:id="@+id/tv_ou"
+        android:id="@+id/tv_autenticacao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="OU"
-        android:textSize="30sp"
-        android:layout_below="@id/bt_login"
+        android:layout_below="@+id/bt_login"
+        android:textColor="#ff0000"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:textColor="#000000"
-        android:fontFamily="sans-serif-medium">
+        android:text="teste">
+
     </TextView>
 
-    <Button
-        android:id="@+id/bt_google"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tv_ou"
-        android:text="Google"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:fontFamily="sans-serif-medium"
-        android:textSize="35dp"
-        android:backgroundTint="#033180">
-    </Button>
 
     <TextView
         android:id="@+id/tv_footer"

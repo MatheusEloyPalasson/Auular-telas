@@ -15,4 +15,6 @@ data class Hotel(
     private var isAuthenticated:Boolean
 
 
+
+
     )
