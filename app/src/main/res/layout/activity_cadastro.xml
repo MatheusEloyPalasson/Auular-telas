@@ -171,6 +171,14 @@
     </Button>
 
 
+        <TextView
+            android:id="@+id/tv_teste"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bt_cadastro"
+            android:text=""/>
+
+
 
 <!--    <TextView-->
 <!--        android:id="@+id/tv_footer"-->

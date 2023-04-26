@@ -99,89 +99,54 @@
         android:layout_below="@+id/search"
         android:orientation="horizontal">
 
-        <LinearLayout
-
+        <androidx.fragment.app.FragmentContainerView
+            android:name="com.example.auular.fragments.HotelFragment"
+            android:id="@+id/fragment_container_view"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30sp"
-            android:layout_marginBottom="20sp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/name_hotel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Hotel Sapcao - Jardins"
-                android:textSize="20sp"
-                android:textColor="@color/black"
+            android:layout_height="wrap_content"/>
 
 
-                />
+
+<!--        <LinearLayout-->
+
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="30sp"-->
+<!--            android:layout_marginBottom="20sp"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/name_hotel"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Hotel Sapcao - Jardins"-->
+<!--                android:textSize="20sp"-->
+<!--                android:textColor="@color/black"-->
 
 
-            <TextView
-                android:id="@+id/localization_hotel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/name_hotel"
-                android:text="Jardins, São Paulo" />
-
-        </LinearLayout>
+<!--                />-->
 
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="horizontal"
-            android:layout_marginLeft="30sp">
+<!--            <TextView-->
+<!--                android:id="@+id/localization_hotel"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/name_hotel"-->
+<!--                android:text="Jardins, São Paulo" />-->
 
-            <ImageView
-                android:id="@+id/iv_rates"
-                android:layout_width="20sp"
-                android:layout_height="20sp"
-                android:layout_gravity="center"
-                android:src="@mipmap/patinha" />
-
-            <ImageView
-                android:id="@+id/iv_rates2"
-                android:layout_width="20sp"
-                android:layout_height="20sp"
-                android:layout_gravity="center"
-                android:src="@mipmap/patinha" />
-
-            <ImageView
-                android:id="@+id/iv_rates3"
-                android:layout_width="20sp"
-                android:layout_height="20sp"
-                android:layout_gravity="center"
-                android:src="@mipmap/patinha" />
+<!--        </LinearLayout>-->
 
 
-            <ImageView
-                android:id="@+id/iv_rates4"
-                android:layout_width="20sp"
-                android:layout_height="20sp"
-                android:layout_gravity="center"
-                android:src="@mipmap/patinha" />
 
-            <ImageView
-                android:id="@+id/iv_rates5"
-                android:layout_width="20sp"
-                android:layout_height="20sp"
-                android:layout_gravity="center"
-                android:src="@mipmap/patinha" />
-
-        </LinearLayout>
 
 
     </LinearLayout>
 
-    <ImageView
-        android:layout_width="200sp"
-        android:layout_height="200sp"
-        android:layout_below="@+id/info_hotel"
-        android:src="@mipmap/passeio" />
+<!--    <ImageView-->
+<!--        android:layout_width="200sp"-->
+<!--        android:layout_height="200sp"-->
+<!--        android:layout_below="@+id/info_hotel"-->
+<!--        android:src="@mipmap/passeio" />-->
 
 
     <TextView
