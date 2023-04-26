@@ -70,7 +70,6 @@
         android:layout_below="@id/tv_esqueceu_senha"
         android:text="@string/button_login"
         android:layout_centerHorizontal="true"
-        android:onClick="logarTutor"
         android:layout_marginTop="20dp"
         android:fontFamily="sans-serif-medium"
         android:textSize="35dp"
