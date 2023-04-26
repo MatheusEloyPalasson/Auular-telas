@@ -3,14 +3,12 @@ package com.example.auular
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import com.example.auular.domain.Login
+import com.example.auular.domain.LoginTutor
 import com.example.auular.domain.PetTutor
-import com.example.auular.utils.Validator
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -38,16 +36,15 @@ class Login : AppCompatActivity() {
         val email = findViewById<EditText>(R.id.et_email).text.toString();
         val senha = findViewById<EditText>(R.id.et_senha).text.toString();
 
-        val login = Login(email, senha)
+        val loginTutor = LoginTutor(email, senha)
 
-        val result: Call<PetTutor> = ApiUsuario.getLogin(login)
+        val result: Call<PetTutor> = ApiUsuario.getLogin(loginTutor)
 
         result.enqueue(object : Callback<PetTutor> {
 
 
             override fun onResponse(call: Call<PetTutor>, response: Response<PetTutor>) {
                 if (response.isSuccessful) { // status 2xx (200, 201, 204 etc)
-                    tvAutenticacao.text = "AAAAAAAAA"
                     val petTutor = response.body()
                     val logar = Intent(applicationContext, Tela_Tutor::class.java)
                     logar.putExtra("petTutorName", petTutor?.name)
