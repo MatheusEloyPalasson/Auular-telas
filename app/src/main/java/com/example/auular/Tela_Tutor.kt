@@ -1,16 +1,16 @@
 package com.example.auular
 
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import android.widget.Toast
-import androidx.fragment.app.FragmentContainerView
+import androidx.recyclerview.widget.RecyclerView
 import com.example.auular.domain.Hotel
-import com.example.auular.fragments.HotelFragment
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import java.util.List
 
 class Tela_Tutor : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,6 +24,9 @@ class Tela_Tutor : AppCompatActivity() {
 
         usuario.setText(hello)
 
+        val hotelResultsRecyclerView = findViewById<RecyclerView>(R.id.hotel_results)
+        val hotelAdapter = HotelAdapter()
+        hotelResultsRecyclerView.adapter = hotelAdapter
 
         val api = ApiUrl.getApiUsuarios()
 
@@ -32,26 +35,22 @@ class Tela_Tutor : AppCompatActivity() {
                 if (response.isSuccessful) {
                     val hotels = response.body();
                     if (hotels?.isNotEmpty()!!) {
-                      
-                    } else {
-
+                        hotelAdapter.setResultList(hotels)
                     }
-                } else {
-
                 }
-
-
             }
 
             override fun onFailure(call: Call<List<Hotel>>, t: Throwable) {
-                Toast.makeText(baseContext, "Erro na API: ${t.message}",
-                    Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    baseContext, "Erro na API: ${t.message}",
+                    Toast.LENGTH_SHORT
+                ).show()
                 t.printStackTrace()
             }
-
-
         })
+    }
 
-
+    fun byteArrayToBitmap(data: ByteArray): Bitmap {
+        return BitmapFactory.decodeByteArray(data, 0, data.size)
     }
 }
