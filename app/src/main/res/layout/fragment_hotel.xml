@@ -19,10 +19,12 @@
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="20sp" />
 
-
-            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/hotel_image" />
 
 
         <TextView

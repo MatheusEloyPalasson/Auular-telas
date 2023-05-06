@@ -21,7 +21,7 @@
             android:layout_gravity="start"
             android:fontFamily="sans-serif-medium"
             android:text="menu"
-            android:textColor="@color/azul_escuro"></TextView>
+            android:textColor="@color/azul_escuro" />
 
 
         <TextView
@@ -61,7 +61,7 @@
             android:id="@+id/iv_patinha"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:src="@mipmap/patinha"></ImageView>
+            android:src="@mipmap/patinha" />
 
     </LinearLayout>
 
@@ -91,63 +91,19 @@
 
     </LinearLayout>
 
-
-    <LinearLayout
-        android:id="@+id/info_hotel"
-        android:layout_width="wrap_content"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/hotel_results"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:orientation="horizontal"
         android:layout_below="@+id/search"
-        android:orientation="horizontal">
-
-        <androidx.fragment.app.FragmentContainerView
-            android:name="com.example.auular.fragments.HotelFragment"
-            android:id="@+id/fragment_container_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-
-
-<!--        <LinearLayout-->
-
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginTop="30sp"-->
-<!--            android:layout_marginBottom="20sp"-->
-<!--            android:orientation="vertical">-->
-
-<!--            <TextView-->
-<!--                android:id="@+id/name_hotel"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Hotel Sapcao - Jardins"-->
-<!--                android:textSize="20sp"-->
-<!--                android:textColor="@color/black"-->
-
-
-<!--                />-->
-
-
-<!--            <TextView-->
-<!--                android:id="@+id/localization_hotel"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_below="@+id/name_hotel"-->
-<!--                android:text="Jardins, São Paulo" />-->
-
-<!--        </LinearLayout>-->
-
-
-
-
-
-    </LinearLayout>
-
-<!--    <ImageView-->
-<!--        android:layout_width="200sp"-->
-<!--        android:layout_height="200sp"-->
-<!--        android:layout_below="@+id/info_hotel"-->
-<!--        android:src="@mipmap/passeio" />-->
-
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:itemCount="4"
+        tools:listitem="@layout/fragment_hotel"/>
 
     <TextView
         android:id="@+id/tv_footer"
@@ -155,13 +111,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="20dp"
-        android:background="@drawable/gradient"
         android:fontFamily="sans-serif-medium"
         android:padding="16dp"
         android:text="@string/app_name"
         android:textAlignment="center"
         android:textColor="#FFFF"
-        android:textSize="40sp"></TextView>
+        android:textSize="40sp" />
 
 
 </RelativeLayout>

@@ -31,22 +31,6 @@ class HotelFragment : Fragment() {
 
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_hotel, container, false)
-        val view = inflater.inflate(R.layout.fragment_hotel, container, false)
-        val nomeHotel = view.findViewById<TextView>(R.id.name_hotel)
-        val telefone = view.findViewById<TextView>(R.id.telefone_hotel)
-        val descricao = view.findViewById<TextView>(R.id.descricao_hotel)
-        nomeHotel.text = nome
-        telefone.text = phoneNumber
-        descricao.text = description
-        return view
-    }
-
     companion object {
 
         // TODO: Rename and change types and number of parameters
