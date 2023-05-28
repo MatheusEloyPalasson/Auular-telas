@@ -29,7 +29,7 @@ class BotaoHome : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         view.findViewById<Button>(R.id.botao_home).setOnClickListener {
-            activity?.findViewById<View>(R.id.)?.callOnClick()
+            activity?.findViewById<View>(R.id.main)?.callOnClick()
         }
     }
 
