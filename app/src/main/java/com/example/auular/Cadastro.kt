@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
-import com.example.auular.domain.LoginTutor
+import com.example.auular.api.ApiUrl
 import com.example.auular.domain.PetTutor
 import com.example.auular.utils.Validator
 import retrofit2.Call

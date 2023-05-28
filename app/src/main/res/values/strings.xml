@@ -75,6 +75,7 @@
     <string name="tv_animais_imagens">Insira imagens de seu estabelecimento para mostrar aos seus novos clientes! (Formato PNG ou JPG)</string>
     <string name="tv_manter_conectado">Manter conectado neste dispositivo</string>
     <string name="tv_animais_deseja_email">Desejo receber conteúdos e promoções via e-mail</string>
+    <string name="tv_mensagem_erro">Pane no sistema, alguém me desconfigurou.</string>
     <string name="tv_by_auular">Made by - Auular ©</string>
 
 
@@ -83,6 +84,8 @@
     <string name="button_cadastrar">Cadastrar</string>
     <string name="button_login">Login</string>
     <string name="button_avancar">Avançar</string>
+    <string name="button_voltar_home">Home</string>
+    <string name="button_voltar">Voltar</string>
 
 
     <string name="title_activity_home_tutor">home_tutor</string>

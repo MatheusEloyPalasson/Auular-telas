@@ -1,10 +1,12 @@
-package com.example.auular
+package com.example.auular.utils
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
+import com.example.auular.Escolha_Cadastro
+import com.example.auular.Login
+import com.example.auular.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

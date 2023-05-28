@@ -1,4 +1,4 @@
-package com.example.auular;
+package com.example.auular.service;
 
 import com.example.auular.domain.Hotel
 import com.example.auular.domain.LoginTutor

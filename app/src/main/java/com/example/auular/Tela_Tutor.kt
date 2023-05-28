@@ -7,6 +7,8 @@ import android.os.Bundle
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.example.auular.adapters.HotelAdapter
+import com.example.auular.api.ApiUrl
 import com.example.auular.domain.Hotel
 import retrofit2.Call
 import retrofit2.Callback
