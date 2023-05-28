@@ -11,15 +11,16 @@
 
     <LinearLayout
         android:id="@+id/container"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        android:orientation="vertical">
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
 
-        <fragment
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            class="com.example.auular.fragments.AppName"
+        <androidx.fragment.app.FragmentContainerView
+            tools:layout="@layout/fragment_app_name"
+            android:name="com.example.auular.fragments.AppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             />
     </LinearLayout>
 
@@ -49,7 +50,14 @@
         android:layout_below="@id/tv_erro"
         android:gravity="center"
         android:orientation="vertical"
-        ></LinearLayout>
+        >
+        <androidx.fragment.app.FragmentContainerView
+            tools:layout="@layout/fragment_botao_home"
+            android:name="com.example.auular.fragments.BotaoHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
 
 
 </RelativeLayout>
