@@ -1,15 +1,12 @@
-package com.example.auular
+package com.example.auular.adapters
 
-import android.annotation.SuppressLint
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
-import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.auular.R
 import com.example.auular.domain.Hotel
 import com.squareup.picasso.Picasso
 
@@ -19,7 +16,7 @@ class HotelAdapter : RecyclerView.Adapter<HotelAdapter.HotelViewHolder>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): HotelAdapter.HotelViewHolder {
+    ): HotelViewHolder {
         val layout =
             LayoutInflater.from(parent.context).inflate(R.layout.fragment_hotel, parent, false)
         return HotelViewHolder(layout)

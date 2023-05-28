@@ -1,5 +1,6 @@
-package com.example.auular
+package com.example.auular.api
 
+import com.example.auular.service.Brasil
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

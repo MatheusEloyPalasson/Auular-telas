@@ -1,5 +1,6 @@
-package com.example.auular
+package com.example.auular.service
 
+import com.example.auular.Address
 import retrofit2.Call;
 import retrofit2.http.*
 
