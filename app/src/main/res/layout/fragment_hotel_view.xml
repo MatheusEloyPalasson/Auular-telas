@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/hotelImagem"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src=""
+        />
+
+    <TextView
+        android:id="@+id/hotelNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="25sp"
+        android:textColor="@color/amarelo_escuro"
+        android:layout_below="@id/hotelImagem"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hotelTelefone"
+        android:text=""
+        android:textSize="25sp"
+        android:textColor="@color/azul_escuro"
+        android:layout_below="@id/hotelNome"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hotelEmail"
+        android:text=""
+        android:textSize="25sp"
+        android:textColor="@color/azul_escuro"
+        android:layout_below="@id/hotelTelefone"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hotelDescrição"
+        android:text=""
+        android:textSize="25sp"
+        android:textColor="@color/azul_escuro"
+        android:layout_below="@id/hotelEmail"/>
+
+
+
+
+</RelativeLayout>

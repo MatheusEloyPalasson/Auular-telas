@@ -18,6 +18,10 @@ interface ApiUsuario {
     @GET("/hotels")
     fun getHotels(): Call<List<Hotel>>
 
+    @GET("/allFieldsByUuid/{hotelUuid}")
+    fun getAllHotelFields(hotelUuid: String )
+
+
     @POST("/petTutors/")
     fun postPetTutor(@Body petTutor: PetTutor): Call<PetTutor>
 
