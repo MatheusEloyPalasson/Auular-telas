@@ -5,6 +5,7 @@ import com.google.gson.annotations.SerializedName
 import java.net.URL
 
 data class Hotel(
+    val hotelUuid : String,
     var name: String,
     @field:SerializedName("email") var email: String,
     @field:SerializedName("password") var password: String,

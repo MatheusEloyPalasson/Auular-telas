@@ -8,4 +8,6 @@ class Tela_Hotel : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tela_hotel)
     }
+
+
 }
