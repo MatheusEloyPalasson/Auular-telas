@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.auular.R
 
-class HotelTelaFragment : Fragment() {
+class HotelDetail : Fragment() {
 
     private lateinit var nome: String
     private lateinit var phoneNumber: String
@@ -16,6 +16,6 @@ class HotelTelaFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View
     ? {
         // Inflar o layout da Fragment
-        return inflater.inflate(R.layout.fragment_hotel_view, container, false)
+        return inflater.inflate(R.layout.fragment_hotel_detail, container, false)
     }
 }

@@ -13,25 +13,23 @@
         android:orientation="vertical"
         android:layout_margin="20dp">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Digite o CEP">
-        </TextView>
+
 
         <EditText
             android:id="@+id/et_cep"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:hint="@string/hint_cep"
             android:inputType="number">
         </EditText>
 
         <Button
             android:id="@+id/bt_pesquisar"
             android:layout_width="match_parent"
+            android:layout_margin="15dp"
             android:layout_height="wrap_content"
             android:text="Pesquisar"
-            android:backgroundTint="@color/black"
+            android:backgroundTint="@color/azul_escuro"
             >
         </Button>
 

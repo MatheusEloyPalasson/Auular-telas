@@ -2,7 +2,7 @@ package com.example.auular
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.auular.fragments.HotelTelaFragment
+import com.example.auular.fragments.HotelDetail
 
 class Tela_Hotel : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,7 +16,7 @@ class Tela_Hotel : AppCompatActivity() {
         val transaction = fragmentManager.beginTransaction()
 
         // Criar uma instância do Fragment
-        val hotelFragment = HotelTelaFragment()
+        val hotelFragment = HotelDetail()
 
         // Adicionar a Fragment ao contêiner
         transaction.add(R.id.containerHotel, hotelFragment)

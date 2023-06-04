@@ -1,5 +1,6 @@
 package com.example.auular.adapters
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,6 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.auular.R
 import com.example.auular.domain.Hotel
+import com.example.auular.fragments.HotelDetail
 import com.squareup.picasso.Picasso
 
 class HotelAdapter : RecyclerView.Adapter<HotelAdapter.HotelViewHolder>() {
@@ -25,6 +27,15 @@ class HotelAdapter : RecyclerView.Adapter<HotelAdapter.HotelViewHolder>() {
     override fun onBindViewHolder(holder: HotelViewHolder, position: Int) {
         val hotel = resultList!![position]
         holder.bind(hotel)
+
+
+        holder.itemView.setOnClickListener {
+            val hotel = resultList!![position]
+            val intent = Intent(holder.itemView.context, HotelDetail::class.java)
+            intent.putExtra("hotel", hotel);
+            holder.itemView.context.startActivity(intent)
+        }
+
     }
 
     override fun getItemCount(): Int {

@@ -41,7 +41,7 @@
     <string name="hint_nome_tutor">Insira seu nome aqui</string>
     <string name="hint_email">Digite seu email</string>
     <string name="hint_nome">Digite o nome do local</string>
-    <string name="hint_cep">00000-000</string>
+    <string name="hint_cep">Digite o CEP</string>
     <string name="hint_estado">Selecione o estado</string>
     <string name="hint_logradouro">Digite o logradouro</string>
     <string name="hint_cidade">Digite a sua cidade</string>
