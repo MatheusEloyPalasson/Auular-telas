@@ -1,6 +1,7 @@
 package com.example.auular.service;
 
 import com.example.auular.domain.Hotel
+import com.example.auular.domain.HotelAddress
 import com.example.auular.domain.LoginTutor
 import com.example.auular.domain.PetTutor
 import okhttp3.ResponseBody
@@ -17,6 +18,9 @@ interface ApiUsuario {
 
     @GET("/hotels")
     fun getHotels(): Call<List<Hotel>>
+
+    @GET("/hotels/addresses")
+    fun getHotelAddresses(): Call<List<HotelAddress>>
 
     @GET("/allFieldsByUuid/{hotelUuid}")
     fun getAllHotelFields(hotelUuid: String )

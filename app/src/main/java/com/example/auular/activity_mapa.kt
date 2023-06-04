@@ -12,7 +12,9 @@ import android.widget.Toast
 import androidx.annotation.DrawableRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
+import com.example.auular.api.ApiUrl
 import com.example.auular.api.BrasilApi
+import com.example.auular.domain.HotelAddress
 import com.mapbox.geojson.Point
 import com.mapbox.maps.MapView
 import com.mapbox.maps.Style
@@ -24,45 +26,86 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class activity_mapa : AppCompatActivity() {
+    private val apiUsuario = BrasilApi.findPlace()
+    private val apiAular = ApiUrl.getApiUsuarios()
     private var mapView: MapView? = null
-    var longitude = 00.00
-    var latitude = 00.00
+
+    var longitudePetTutor = 00.00
+    var latitudePetTutor = 00.00
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_mapa)
         mapView = findViewById(R.id.mapView)
-        mapView?.getMapboxMap()?.loadStyleUri(
-            Style.MAPBOX_STREETS,
-            object : Style.OnStyleLoaded {
-                override fun onStyleLoaded(style: Style) {
-                    addAnnotationToMap()
-                }
+        mapView?.getMapboxMap()?.loadStyleUri(Style.MAPBOX_STREETS, object : Style.OnStyleLoaded {
+            override fun onStyleLoaded(style: Style) {
+                addAnnotationToMap(longitudePetTutor, latitudePetTutor)
             }
-        )
+        })
         val buttonPesquisar = findViewById<Button>(R.id.bt_pesquisar)
 
         var cep = findViewById<EditText>(R.id.et_cep)
 
-        val ApiUsuario = BrasilApi.findPlace()
 
         buttonPesquisar.setOnClickListener {
 
-            val result: Call<Address> = ApiUsuario.buscar(cep.text.toString().toLong())
+            val result: Call<Address> = apiUsuario.buscar(cep.text.toString())
+            val result2 = apiAular.getHotelAddresses()
 
             result.enqueue(object : Callback<Address> {
                 override fun onResponse(call: Call<Address>, response: Response<Address>) {
                     if (response.isSuccessful) {
                         val address = response.body()
-                        longitude = address!!.location.coordinates.longitude
-                        latitude = address.location.coordinates.latitude
+                        longitudePetTutor = address!!.location.coordinates.longitude
+                        latitudePetTutor = address.location.coordinates.latitude
                     }
                 }
 
                 override fun onFailure(call: Call<Address>, t: Throwable) {
                     Toast.makeText(
-                        baseContext, "Erro na API: ${t.message}",
-                        Toast.LENGTH_SHORT
+                        baseContext, "Erro na API: ${t.message}", Toast.LENGTH_SHORT
+                    ).show()
+                    t.printStackTrace()
+                }
+            })
+
+            result2.enqueue(object : Callback<List<HotelAddress>> {
+                override fun onResponse(
+                    call: Call<List<HotelAddress>>, response: Response<List<HotelAddress>>
+                ) {
+                    if (response.isSuccessful) {
+                        val hotelAddresses = response.body()
+                    }
+                }
+
+                override fun onFailure(call: Call<List<HotelAddress>>, t: Throwable) {
+                    Toast.makeText(
+                        baseContext, "Erro na API: ${t.message}", Toast.LENGTH_SHORT
+                    ).show()
+                    t.printStackTrace()
+                }
+            })
+        }
+    }
+
+    private fun pinHotelAddresses(addresses: List<HotelAddress>) {
+        for (hotel: HotelAddress in addresses) {
+            val result = this.apiUsuario.buscar(hotel.addressCode)
+
+            result.enqueue(object : Callback<Address> {
+                override fun onResponse(call: Call<Address>, response: Response<Address>) {
+                    if (response.isSuccessful) {
+                        val address = response.body()
+                        val longitude = address!!.location.coordinates.longitude
+                        val latitude = address.location.coordinates.latitude
+
+                        addAnnotationToMap(longitude, latitude)
+                    }
+                }
+
+                override fun onFailure(call: Call<Address>, t: Throwable) {
+                    Toast.makeText(
+                        baseContext, "Erro na API: ${t.message}", Toast.LENGTH_SHORT
                     ).show()
                     t.printStackTrace()
                 }
@@ -71,22 +114,15 @@ class activity_mapa : AppCompatActivity() {
     }
 
 
-    private fun addAnnotationToMap() {
-// Create an instance of the Annotation API and get the PointAnnotationManager.
+    private fun addAnnotationToMap(longitude: Double, latitude: Double) {
         bitmapFromDrawableRes(
-            this@activity_mapa,
-            R.drawable.red_marker
+            this@activity_mapa, R.drawable.dog
         )?.let {
             val annotationApi = mapView?.annotations
             val pointAnnotationManager = annotationApi?.createPointAnnotationManager(mapView!!)
-// Set options for the resulting symbol layer.
-            val pointAnnotationOptions: PointAnnotationOptions = PointAnnotationOptions()
-// Define a geographic coordinate.
-                .withPoint(Point.fromLngLat(longitude, latitude))
-// Specify the bitmap you assigned to the point annotation
-// The bitmap will be added to map style automatically.
-                .withIconImage(it)
-// Add the resulting pointAnnotation to the map.
+            val pointAnnotationOptions: PointAnnotationOptions =
+                PointAnnotationOptions().withPoint(Point.fromLngLat(longitude, latitude))
+                    .withIconImage(it)
             pointAnnotationManager?.create(pointAnnotationOptions)
         }
     }
@@ -101,12 +137,10 @@ class activity_mapa : AppCompatActivity() {
         return if (sourceDrawable is BitmapDrawable) {
             sourceDrawable.bitmap
         } else {
-// copying drawable object to not manipulate on the same reference
             val constantState = sourceDrawable.constantState ?: return null
             val drawable = constantState.newDrawable().mutate()
             val bitmap: Bitmap = Bitmap.createBitmap(
-                drawable.intrinsicWidth, drawable.intrinsicHeight,
-                Bitmap.Config.ARGB_8888
+                drawable.intrinsicWidth, drawable.intrinsicHeight, Bitmap.Config.ARGB_8888
             )
             val canvas = Canvas(bitmap)
             drawable.setBounds(0, 0, canvas.width, canvas.height)
