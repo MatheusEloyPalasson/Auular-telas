@@ -46,7 +46,6 @@ class activity_mapa : AppCompatActivity() {
 
         var cep = findViewById<EditText>(R.id.et_cep)
 
-
         buttonPesquisar.setOnClickListener {
 
             val result: Call<Address> = apiUsuario.buscar(cep.text.toString())
@@ -117,6 +116,19 @@ class activity_mapa : AppCompatActivity() {
     private fun addAnnotationToMap(longitude: Double, latitude: Double) {
         bitmapFromDrawableRes(
             this@activity_mapa, R.drawable.dog
+        )?.let {
+            val annotationApi = mapView?.annotations
+            val pointAnnotationManager = annotationApi?.createPointAnnotationManager(mapView!!)
+            val pointAnnotationOptions: PointAnnotationOptions =
+                PointAnnotationOptions().withPoint(Point.fromLngLat(longitude, latitude))
+                    .withIconImage(it)
+            pointAnnotationManager?.create(pointAnnotationOptions)
+        }
+    }
+
+    private fun addHotelAnnotationToMap(longitude: Double, latitude: Double) {
+        bitmapFromDrawableRes(
+            this@activity_mapa, R.drawable.hotel
         )?.let {
             val annotationApi = mapView?.annotations
             val pointAnnotationManager = annotationApi?.createPointAnnotationManager(mapView!!)
