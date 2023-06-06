@@ -6,6 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 object ApiUrl {
 
     var BASE_URL = "http://54.162.20.136:8080"
+//    var BASE_URL = "http://54.205.74.169:8080"
 //    var BASE_URL = "http://172.26.16.1:8080"
 
     fun getApiUsuarios() : ApiUsuario {

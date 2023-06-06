@@ -41,9 +41,9 @@
         android:layout_width="match_parent"
         android:layout_height="600dp"
         android:layout_centerHorizontal="true"
-        mapbox:mapbox_cameraTargetLat="59.31"
-        mapbox:mapbox_cameraTargetLng="18.06"
-        mapbox:mapbox_cameraZoom="9.0"
+        mapbox:mapbox_cameraTargetLat="-23.546562"
+        mapbox:mapbox_cameraTargetLng="-46.634024"
+        mapbox:mapbox_cameraZoom="2.0"
         android:layout_below="@id/cep"/>
 
 
