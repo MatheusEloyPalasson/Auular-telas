@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".cadastro_empresa_E">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_auular_cadastro_hotel"
+        android:text="Auular"
+        android:textSize="50sp"
+        android:textColor="#033180"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginTop="10dp">
+    </TextView>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_cadastro_hotel"
+        android:layout_width="match_parent"
+        android:layout_height="590dp"
+        android:layout_below="@id/tv_auular_cadastro_hotel" />
+
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:id="@+id/voltar_btn"
+        android:backgroundTint="#033180"
+        android:layout_below="@id/fragment_cadastro_hotel"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:text="Voltar"
+        android:fontFamily="sans-serif-medium"
+        android:textFontWeight="900"/>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:id="@+id/avancar_btn"
+        android:backgroundTint="#033180"
+        android:layout_below="@id/fragment_cadastro_hotel"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:text="Avançar"
+        android:fontFamily="sans-serif-medium"
+        android:textFontWeight="900"/>
+
+</RelativeLayout>

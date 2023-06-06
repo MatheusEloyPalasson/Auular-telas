@@ -104,5 +104,45 @@
     <string name="mapbox_access_token">sk.eyJ1IjoiZ3Nzb3V6YSIsImEiOiJjbGdoYWNodWIwMWNtM2dsbHRpMjAzYzVlIn0.-bULwyE9axLpmow4rzuYJA</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="_1_2_3">1 - 2 - 3</string>
+    <string name="empresa">Empresa</string>
+    <string name="nome">Nome</string>
+    <string name="matheus_eloy_palasson">Matheus Eloy Palasson</string>
+    <string name="endere_o_de_e_mail">Endereço de e-mail</string>
+    <string name="matheus_palasson_gmail_com">matheus.palasson@gmail.com</string>
+    <string name="senha">Senha</string>
+    <string name="hint_senha_cadastro">*******</string>
+    <string name="cep">CEP</string>
+    <string name="_00000_000">00000-000</string>
+    <string name="bairro">Bairro</string>
+    <string name="consola_o">Consolação</string>
+    <string name="lougradouro">Lougradouro</string>
+    <string name="rua_haddock_lobo">Rua Haddock Lobo</string>
+    <string name="cidade">Cidade</string>
+    <string name="s_o_paulo">São Paulo</string>
+    <string name="estado">Estado</string>
+    <string name="sp">SP</string>
+    <string name="ocupa_o">Ocupação</string>
+    <string name="_35">35</string>
+    <string name="servi_os">Serviços</string>
+    <string name="piscina">Piscina</string>
+    <string name="passeio">Passeio</string>
+    <string name="parquinho">Parquinho</string>
+    <string name="adestramento">Adestramento</string>
+    <string name="brinquedos">Brinquedos</string>
+    <string name="spa">Spa</string>
+    <string name="banho">Banho</string>
+    <string name="nutricionista">Nutricionista</string>
+    <string name="tosa">Tosa</string>
+    <string name="veterinario">Veterinario</string>
+    <string name="animais_permitidos">Animais permitidos</string>
+    <string name="c_es">Cães</string>
+    <string name="gatos">Gatos</string>
+    <string name="aves">Aves</string>
+    <string name="anf_bio">Anfíbio</string>
+    <string name="roedores">Roedores</string>
+    <string name="r_pteis">Répteis</string>
+    <string name="outros">Outros</string>
+    <string name="insira_imagens_de_seu_estabelecimento_para_mostrar_aos_seus_novos_clientes_formato_png_ou_jpg">Insira imagens de seu estabelecimento para mostrar aos seus novos clientes! (Formato PNG ou JPG)</string>
 
 </resources>

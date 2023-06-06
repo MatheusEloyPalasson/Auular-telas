@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_1_2_3"
+        android:textSize="40sp"
+        android:textColor="#000000"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tv_indicador">
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/tv_indicador"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/ll_pagina">
+
+        <EditText
+            android:layout_width="30dp"
+            android:layout_height="10dp"
+            android:textSize="20sp"
+            android:background="@drawable/border_yellow"
+            android:id="@+id/et_pagina_um">
+        </EditText>
+
+        <EditText
+            android:layout_width="30dp"
+            android:layout_height="10dp"
+            android:textSize="20sp"
+            android:background="#FFFFFF">
+        </EditText>
+
+        <EditText
+            android:layout_width="30dp"
+            android:layout_height="10dp"
+            android:textSize="20sp"
+            android:background="@drawable/border_yellow"
+            android:id="@+id/et_pagina_dois">
+        </EditText>
+
+        <EditText
+            android:layout_width="30dp"
+            android:layout_height="10dp"
+            android:textSize="20sp"
+            android:background="#FFFFFF">
+        </EditText>
+
+        <EditText
+            android:layout_width="30dp"
+            android:layout_height="10dp"
+            android:textSize="20sp"
+            android:background="@drawable/border_blue"
+            android:id="@+id/et_pagina_tres">
+        </EditText>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/amarelo_padrao"
+        android:text="@string/empresa"
+        android:layout_below="@+id/ll_pagina"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp"
+        android:id="@+id/tv_empresa">
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/insira_imagens_de_seu_estabelecimento_para_mostrar_aos_seus_novos_clientes_formato_png_ou_jpg"
+        android:layout_below="@id/tv_empresa"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:id="@+id/tv_frase">
+    </TextView>
+
+    <ImageButton
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:id="@+id/ib_adicionar"
+        android:layout_below="@id/tv_frase"
+        android:src="@mipmap/adicionar"
+        android:background="@mipmap/adicionar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
+    </ImageButton>
+
+    <CheckBox
+        android:id="@+id/cb_conectado"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/border_servicos"
+        android:layout_below="@id/ib_adicionar">
+    </CheckBox>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Manter conectado neste dispositivo"
+        android:id="@+id/tv_parquinho"
+        android:layout_below="@id/ib_adicionar"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="20dp">
+    </TextView>
+
+    <CheckBox
+        android:id="@+id/cb_email"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/border_servicos"
+        android:layout_below="@id/cb_conectado">
+    </CheckBox>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Desejo receber conteúdos e promoções via e-mail"
+        android:id="@+id/tv_email"
+        android:layout_below="@id/cb_conectado"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="20dp">
+    </TextView>
+
+</RelativeLayout>

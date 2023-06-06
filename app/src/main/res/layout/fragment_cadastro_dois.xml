@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_1_2_3"
+        android:textSize="40sp"
+        android:textColor="#000000"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tv_indicador">
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/tv_indicador"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/ll_pagina">
+
+        <EditText
+            android:layout_width="30dp"
+            android:layout_height="10dp"
+            android:textSize="20dp"
+            android:background="@drawable/border_yellow"
+            android:id="@+id/et_pagina_um">
+        </EditText>
+
+        <EditText
+            android:layout_width="30dp"
+            android:layout_height="10dp"
+            android:textSize="20sp"
+            android:background="#FFFFFF">
+        </EditText>
+
+        <EditText
+            android:layout_width="30dp"
+            android:layout_height="10dp"
+            android:textSize="20sp"
+            android:background="@drawable/border_blue"
+            android:id="@+id/et_pagina_dois">
+        </EditText>
+
+        <EditText
+            android:layout_width="30dp"
+            android:layout_height="10dp"
+            android:textSize="20sp"
+            android:background="#FFFFFF">
+        </EditText>
+
+        <EditText
+            android:layout_width="30dp"
+            android:layout_height="10dp"
+            android:textSize="20sp"
+            android:background="@drawable/border_yellow"
+            android:id="@+id/et_pagina_tres">
+        </EditText>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/amarelo_padrao"
+        android:text="@string/empresa"
+        android:layout_below="@+id/ll_pagina"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp"
+        android:id="@+id/tv_empresa">
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ocupa_o"
+        android:textColor="@color/azul_escuro"
+        android:layout_below="@id/tv_empresa"
+        android:textSize="25sp"
+        android:id="@+id/tv_ocupacao"
+        android:layout_marginStart="10dp">
+    </TextView>
+
+    <EditText
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_ocupacao"
+        android:text="@string/_35"
+        android:textColor="@color/azul_escuro"
+        android:background="@drawable/border"
+        android:id="@+id/et_ocupacao">
+    </EditText>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/servi_os"
+        android:textColor="@color/azul_escuro"
+        android:layout_below="@id/et_ocupacao"
+        android:textSize="25sp"
+        android:id="@+id/tv_servicos"
+        android:layout_marginStart="10dp">
+    </TextView>
+
+
+    <CheckBox
+        android:id="@+id/cb_piscina"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/border_servicos"
+        android:layout_below="@id/tv_servicos">
+    </CheckBox>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/piscina"
+        android:id="@+id/tv_piscina"
+        android:layout_below="@id/tv_servicos"
+        android:textSize="25sp"
+        android:textColor="@color/azul_escuro"
+        android:layout_marginStart="60dp">
+    </TextView>
+
+    <CheckBox
+        android:id="@+id/cb_passeio"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/border_servicos"
+        android:layout_below="@id/tv_servicos">
+    </CheckBox>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/passeio"
+        android:id="@+id/tv_passeio"
+        android:layout_below="@id/tv_servicos"
+        android:textSize="25sp"
+        android:textColor="@color/azul_escuro"
+        android:layout_marginStart="290dp">
+    </TextView>
+
+
+    <CheckBox
+        android:id="@+id/cb_parquinho"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/border_servicos"
+        android:layout_below="@id/tv_piscina">
+    </CheckBox>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/parquinho"
+        android:id="@+id/tv_parquinho"
+        android:layout_below="@id/tv_piscina"
+        android:textSize="25sp"
+        android:textColor="@color/azul_escuro"
+        android:layout_marginStart="60dp">
+    </TextView>
+
+
+    <CheckBox
+        android:id="@+id/cb_adestramento"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/border_servicos"
+        android:layout_below="@id/tv_piscina">
+    </CheckBox>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/adestramento"
+        android:id="@+id/tv_adestramento"
+        android:layout_below="@id/tv_piscina"
+        android:textSize="19sp"
+        android:layout_marginTop="7dp"
+        android:textColor="@color/azul_escuro"
+        android:layout_marginStart="290dp">
+    </TextView>
+
+
+    <CheckBox
+        android:id="@+id/cb_brinquedos"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/border_servicos"
+        android:layout_below="@id/tv_parquinho">
+    </CheckBox>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/brinquedos"
+        android:id="@+id/tv_brinquedos"
+        android:layout_below="@id/tv_parquinho"
+        android:textSize="25sp"
+        android:textColor="@color/azul_escuro"
+        android:layout_marginStart="60dp">
+    </TextView>
+
+
+    <CheckBox
+        android:id="@+id/cb_spa"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/border_servicos"
+        android:layout_below="@id/tv_parquinho">
+    </CheckBox>
+    <TextView
+        android:id="@+id/tv_spa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_parquinho"
+        android:layout_marginStart="290dp"
+        android:text="@string/spa"
+        android:textColor="@color/azul_escuro"
+        android:textSize="25sp">
+    </TextView>
+
+
+    <CheckBox
+        android:id="@+id/cb_banho"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/border_servicos"
+        android:layout_below="@id/tv_brinquedos">
+    </CheckBox>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/banho"
+        android:id="@+id/tv_banho"
+        android:layout_below="@id/tv_brinquedos"
+        android:textSize="25sp"
+        android:textColor="@color/azul_escuro"
+        android:layout_marginStart="60dp">
+    </TextView>
+
+
+    <CheckBox
+        android:id="@+id/cb_nutricionista"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/border_servicos"
+        android:layout_below="@id/tv_brinquedos">
+    </CheckBox>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nutricionista"
+        android:id="@+id/tv_nutri"
+        android:layout_below="@id/tv_brinquedos"
+        android:textSize="20sp"
+        android:layout_marginTop="7dp"
+        android:textColor="@color/azul_escuro"
+        android:layout_marginStart="290dp">
+    </TextView>
+
+
+    <CheckBox
+        android:id="@+id/cb_tosa"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/border_servicos"
+        android:layout_below="@id/tv_banho">
+    </CheckBox>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tosa"
+        android:id="@+id/tv_tosa"
+        android:layout_below="@id/tv_banho"
+        android:textSize="25sp"
+        android:textColor="@color/azul_escuro"
+        android:layout_marginStart="60dp">
+    </TextView>
+
+
+    <CheckBox
+        android:id="@+id/cb_veterinario"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/border_servicos"
+        android:layout_below="@id/tv_banho">
+    </CheckBox>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/veterinario"
+        android:id="@+id/tv_veterinario"
+        android:layout_below="@id/tv_banho"
+        android:textSize="25sp"
+        android:textColor="@color/azul_escuro"
+        android:layout_marginStart="290dp">
+    </TextView>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/animais_permitidos"
+        android:textColor="@color/azul_escuro"
+        android:layout_below="@id/cb_tosa"
+        android:textSize="25sp"
+        android:id="@+id/tv_animais"
+        android:layout_marginStart="10dp">
+    </TextView>
+
+
+    <CheckBox
+        android:id="@+id/cb_cao"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/border_servicos"
+        android:layout_below="@id/tv_animais">
+    </CheckBox>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/c_es"
+        android:id="@+id/tv_cao"
+        android:layout_below="@id/tv_animais"
+        android:textSize="25sp"
+        android:textColor="@color/azul_escuro"
+        android:layout_marginStart="60dp">
+    </TextView>
+
+
+    <CheckBox
+        android:id="@+id/cb_gato"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/border_servicos"
+        android:layout_below="@id/tv_animais">
+    </CheckBox>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gatos"
+        android:id="@+id/tv_gatos"
+        android:layout_below="@id/tv_animais"
+        android:textSize="25sp"
+        android:textColor="@color/azul_escuro"
+        android:layout_marginStart="290dp">
+    </TextView>
+
+    <CheckBox
+        android:id="@+id/cb_aves"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/border_servicos"
+        android:layout_below="@id/tv_cao">
+    </CheckBox>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/aves"
+        android:id="@+id/tv_aves"
+        android:layout_below="@id/tv_cao"
+        android:textSize="25sp"
+        android:textColor="@color/azul_escuro"
+        android:layout_marginStart="60dp">
+    </TextView>
+
+    <CheckBox
+        android:id="@+id/cb_anfibios"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/border_servicos"
+        android:layout_below="@id/tv_cao">
+    </CheckBox>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/anf_bio"
+        android:id="@+id/tv_anfibio"
+        android:layout_below="@id/tv_cao"
+        android:textSize="25sp"
+        android:textColor="@color/azul_escuro"
+        android:layout_marginStart="290dp">
+    </TextView>
+
+    <CheckBox
+        android:id="@+id/cb_roedor"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/border_servicos"
+        android:layout_below="@id/tv_aves">
+    </CheckBox>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/roedores"
+        android:id="@+id/tv_roedores"
+        android:layout_below="@id/tv_aves"
+        android:textSize="25sp"
+        android:textColor="@color/azul_escuro"
+        android:layout_marginStart="60dp">
+    </TextView>
+
+    <CheckBox
+        android:id="@+id/cb_repteis"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/border_servicos"
+        android:layout_below="@id/tv_aves">
+    </CheckBox>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/r_pteis"
+        android:id="@+id/tv_repteis"
+        android:layout_below="@id/tv_aves"
+        android:textSize="25sp"
+        android:textColor="@color/azul_escuro"
+        android:layout_marginStart="290dp">
+    </TextView>
+
+    <CheckBox
+        android:id="@+id/cb_outros"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/border_servicos"
+        android:layout_below="@id/tv_roedores">
+    </CheckBox>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/outros"
+        android:id="@+id/tv_outros"
+        android:layout_below="@id/tv_roedores"
+        android:textSize="25sp"
+        android:textColor="@color/azul_escuro"
+        android:layout_marginStart="60dp">
+    </TextView>
+
+</RelativeLayout>
