@@ -23,7 +23,6 @@ class MainActivity : AppCompatActivity() {
     fun cadastroHome(componente: View) {
             val cadastro = Intent(applicationContext, Escolha_Cadastro::class.java)
             startActivity(cadastro)
-
     }
 
 

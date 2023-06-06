@@ -1,17 +1,20 @@
     package com.example.auular
 
     import android.content.Context
+    import android.content.Intent
     import android.graphics.Bitmap
     import android.graphics.Canvas
     import android.graphics.drawable.BitmapDrawable
     import android.graphics.drawable.Drawable
     import android.os.Bundle
+    import android.util.Log
     import android.widget.Button
     import android.widget.EditText
     import android.widget.Toast
     import androidx.annotation.DrawableRes
     import androidx.appcompat.app.AppCompatActivity
     import androidx.appcompat.content.res.AppCompatResources
+    import androidx.databinding.DataBindingUtil.setContentView
     import com.example.auular.api.ApiUrl
     import com.example.auular.api.BrasilApi
     import com.example.auular.domain.HotelAddress
@@ -19,6 +22,8 @@
     import com.mapbox.maps.MapView
     import com.mapbox.maps.Style
     import com.mapbox.maps.plugin.annotation.annotations
+    import com.mapbox.maps.plugin.annotation.generated.OnPointAnnotationClickListener
+    import com.mapbox.maps.plugin.annotation.generated.PointAnnotation
     import com.mapbox.maps.plugin.annotation.generated.PointAnnotationOptions
     import com.mapbox.maps.plugin.annotation.generated.createPointAnnotationManager
     import retrofit2.Call
@@ -30,16 +35,29 @@
         private val apiAular = ApiUrl.getApiUsuarios()
         private var mapView: MapView? = null
 
-        var longitudePetTutor = 00.00
-        var latitudePetTutor = 00.00
+        var longitudePetTutor = -23.546562
+
+        var latitudePetTutor = -46.634024
 
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_mapa)
             mapView = findViewById(R.id.mapView)
             mapView?.getMapboxMap()?.loadStyleUri(Style.MAPBOX_STREETS, object : Style.OnStyleLoaded {
+
                 override fun onStyleLoaded(style: Style) {
-                    addAnnotationToMap(longitudePetTutor, latitudePetTutor)
+                    val pointAnnotationManager = mapView?.annotations?.createPointAnnotationManager(mapView!!)
+
+                    // Configurar o clique nos ícones
+                    pointAnnotationManager?.addClickListener(OnPointAnnotationClickListener { pointAnnotation ->
+
+                        val logar = Intent(applicationContext, Login::class.java)
+                        startActivity(logar)
+                        // Exemplo de ação ao clicar no ícone
+                        Toast.makeText(this@activity_mapa, "Ícone clicado", Toast.LENGTH_SHORT).show()
+
+                        true // Retorna 'true' para consumir o clique no ícone
+                    })
                 }
             })
             val buttonPesquisar = findViewById<Button>(R.id.bt_pesquisar)
@@ -48,6 +66,10 @@
 
             buttonPesquisar.setOnClickListener {
 
+                Log.i(
+                    "CEP",
+                    cep.text.toString()
+                )
                 val result: Call<Address> = apiUsuario.buscar(cep.text.toString())
                 val result2 = apiAular.getHotelAddresses()
 
@@ -55,8 +77,16 @@
                     override fun onResponse(call: Call<Address>, response: Response<Address>) {
                         if (response.isSuccessful) {
                             val address = response.body()
+                            Log.i(
+                                "TUTOR",
+                                address.toString()
+                            )
                             longitudePetTutor = address!!.location.coordinates.longitude
                             latitudePetTutor = address.location.coordinates.latitude
+
+                            addAnnotationToMap(longitudePetTutor, latitudePetTutor)
+                            cep.getText().clear();
+
                         }
                     }
 
@@ -73,7 +103,7 @@
                         call: Call<List<HotelAddress>>, response: Response<List<HotelAddress>>
                     ) {
                         if (response.isSuccessful) {
-                            val hotelAddresses = response.body()
+                            response.body()?.let { pinHotelAddresses(it) }
                         }
                     }
 
@@ -98,7 +128,8 @@
                             val longitude = address!!.location.coordinates.longitude
                             val latitude = address.location.coordinates.latitude
 
-                            addAnnotationToMap(longitude, latitude)
+                            addHotelAnnotationToMap(longitude, latitude)
+
                         }
                     }
 
@@ -121,21 +152,21 @@
                 val pointAnnotationManager = annotationApi?.createPointAnnotationManager(mapView!!)
                 val pointAnnotationOptions: PointAnnotationOptions =
                     PointAnnotationOptions().withPoint(Point.fromLngLat(longitude, latitude))
-                        .withIconImage(it)
+                        .withIconImage(it).withIconSize(0.6)
                 pointAnnotationManager?.create(pointAnnotationOptions)
             }
         }
 
-        private fun addHotelAnnotationToMap(longitude: Double, latitude: Double) {
-            bitmapFromDrawableRes(
+        private fun addHotelAnnotationToMap(longitude: Double, latitude: Double): PointAnnotation?{
+           return bitmapFromDrawableRes(
                 this@activity_mapa, R.mipmap.hotel
             )?.let {
                 val annotationApi = mapView?.annotations
                 val pointAnnotationManager = annotationApi?.createPointAnnotationManager(mapView!!)
                 val pointAnnotationOptions: PointAnnotationOptions =
                     PointAnnotationOptions().withPoint(Point.fromLngLat(longitude, latitude))
-                        .withIconImage(it)
-                pointAnnotationManager?.create(pointAnnotationOptions)
+                        .withIconImage(it).withIconSize(0.6)
+                return pointAnnotationManager?.create(pointAnnotationOptions)
             }
         }
 
@@ -160,4 +191,10 @@
                 bitmap
             }
         }
+
+
+
+
+
+
     }
