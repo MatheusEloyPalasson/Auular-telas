@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:id="@+id/menu"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="start"
             android:fontFamily="sans-serif-medium"
-            android:text="menu"
+            android:text=""
             android:textColor="@color/azul_escuro" />
 
 
@@ -28,7 +28,7 @@
             android:id="@+id/hello_user"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="270sp"
+            android:layout_marginLeft="300dp"
             android:fontFamily="sans-serif-medium"
             android:text="E aí, usuário!"
             android:textColor="@color/azul_escuro" />
@@ -76,18 +76,18 @@
 
         <EditText
             android:id="@+id/search_bar"
-            android:layout_width="300sp"
+            android:layout_width="280sp"
             android:layout_height="wrap_content"
-            android:hint="@string/et_search" />
+            />
 
         <Button
             android:id="@+id/filter_search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
+            android:layout_marginLeft="10dp"
             android:backgroundTint="@color/azul_escuro"
             android:fontFamily="sans-serif-medium"
-            android:text="filtro"
+            android:text="@string/et_search"
             android:textColor="@color/white" />
 
     </LinearLayout>

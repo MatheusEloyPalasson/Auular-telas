@@ -45,23 +45,16 @@
         android:textColor="@color/azul_escuro"
         android:layout_below="@id/img_erro"/>
 
-    <LinearLayout
-        android:id="@+id/container2"
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/btnVoltar"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:text="@string/button_voltar"
         android:layout_below="@id/tv_erro"
-        android:gravity="center"
-        android:orientation="vertical"
-        >
-        <androidx.fragment.app.FragmentContainerView
-            tools:layout="@layout/fragment_botao_home"
-            android:name="com.example.auular.fragments.BotaoHome"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/azul_escuro"
+        android:layout_marginTop="20dp"/>
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
-    </LinearLayout>
 
 
 </RelativeLayout>
