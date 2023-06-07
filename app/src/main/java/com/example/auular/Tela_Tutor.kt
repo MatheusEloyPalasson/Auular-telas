@@ -17,7 +17,7 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class Tela_Tutor : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
+     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tela_tutor)
 
@@ -28,6 +28,7 @@ class Tela_Tutor : AppCompatActivity() {
 
         btnFiltro.setOnClickListener {
             val error = Intent(applicationContext, ErrorActivity::class.java)
+            error.putExtra("petTutorName", name)
             startActivity(error)
         }
 

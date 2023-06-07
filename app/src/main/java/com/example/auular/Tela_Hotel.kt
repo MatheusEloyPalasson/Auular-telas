@@ -5,7 +5,7 @@ import android.os.Bundle
 import com.example.auular.fragments.HotelDetail
 
 class Tela_Hotel : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?, ) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tela_hotel)
 

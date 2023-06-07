@@ -13,10 +13,14 @@ class ErrorActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_error)
 
+        val name = intent.getStringExtra("petTutorName")
+
+
         val button = findViewById<Button>(R.id.btnVoltar)
 
         button.setOnClickListener {
             val voltar = Intent(applicationContext, Tela_Tutor::class.java)
+            voltar.putExtra("petTutorName", name)
             startActivity(voltar)
         }
 
