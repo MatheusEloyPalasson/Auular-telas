@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Tela_Tutor">
+    android:layout_height="match_parent">
 
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Tela_Tutor">
 
     <LinearLayout
         android:id="@+id/menu"
@@ -122,22 +127,10 @@
         tools:itemCount="4"
         tools:listitem="@layout/fragment_hotel" />
 
-    <TextView
-        android:id="@+id/tv_footer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="-5dp"
-        android:fontFamily="sans-serif-medium"
-        android:padding="16dp"
-        android:text="@string/app_name"
-        android:textAlignment="center"
-        android:textColor="#FFFF"
-        android:textSize="40sp" />
 
+    </RelativeLayout>
 
-</RelativeLayout>
+</ScrollView>
 
 
 
