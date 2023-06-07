@@ -5,6 +5,7 @@ plugins {
 
 android {
     compileSdk 33
+    namespace 'com.example.auular'
 
     defaultConfig {
         applicationId "com.example.auular"

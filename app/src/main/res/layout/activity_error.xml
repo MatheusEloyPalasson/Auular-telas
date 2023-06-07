@@ -10,13 +10,14 @@
 
 
     <LinearLayout
-        android:id="@+id/container"
+        android:id="@+id/containerView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:orientation="horizontal">
 
         <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/container"
             tools:layout="@layout/fragment_app_name"
             android:name="com.example.auular.fragments.AppName"
             android:layout_width="wrap_content"
@@ -28,7 +29,7 @@
         android:id="@+id/img_erro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/container"
+        android:layout_below="@+id/containerView"
         android:layout_marginTop="0dp"
         android:layout_centerHorizontal="true"
         android:src="@mipmap/error" />

@@ -1,9 +1,11 @@
 package com.example.auular
 
+import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
@@ -21,6 +23,13 @@ class Tela_Tutor : AppCompatActivity() {
 
         val name = intent.getStringExtra("petTutorName")
         val usuario = findViewById<TextView>(R.id.hello_user)
+
+        val btnFiltro = findViewById<Button>(R.id.filter_search)
+
+        btnFiltro.setOnClickListener {
+            val error = Intent(applicationContext, ErrorActivity::class.java)
+            startActivity(error)
+        }
 
         val hello = "E aí, ${name}!"
 

@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.auular.R
+import com.example.auular.R.mipmap
 import com.example.auular.domain.Hotel
 import com.example.auular.fragments.HotelDetail
 import com.squareup.picasso.Picasso
@@ -56,12 +57,17 @@ class HotelAdapter : RecyclerView.Adapter<HotelAdapter.HotelViewHolder>() {
 
         private val hotelName: TextView = itemView.findViewById(R.id.name_hotel)
         private val hotelDescription: TextView = itemView.findViewById(R.id.descricao_hotel)
-        private val hotelImage: ImageView = itemView.findViewById(R.id.hotel_image)
+        private var hotelImage: ImageView = itemView.findViewById(R.id.hotel_image)
 
         fun bind(hotel: Hotel) {
             hotelName.text = hotel.name
             hotelDescription.text = hotel.description
-            Picasso.get().load(hotel.imageByteArray).into(hotelImage);
+            if (!hotel.imageByteArray.isNullOrEmpty()) {
+                Picasso.get().load(hotel.imageByteArray).into(hotelImage);
+            }
+            else {
+                  hotelImage.setImageResource(R.mipmap.pethotel);
+            }
         }
     }
 }

@@ -62,6 +62,20 @@
             })
             val buttonPesquisar = findViewById<Button>(R.id.bt_pesquisar)
 
+            val buttonCadastrar = findViewById<Button>(R.id.bt_cadastro)
+
+            buttonCadastrar.setOnClickListener {
+                val cadastro = Intent(applicationContext, Cadastro::class.java)
+                startActivity(cadastro)
+            }
+
+            val buttonLogin = findViewById<Button>(R.id.bt_login)
+
+            buttonLogin.setOnClickListener {
+                val login = Intent(applicationContext, Login::class.java)
+                startActivity(login)
+            }
+
             var cep = findViewById<EditText>(R.id.et_cep)
 
             buttonPesquisar.setOnClickListener {

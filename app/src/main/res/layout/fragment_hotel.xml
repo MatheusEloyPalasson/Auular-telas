@@ -23,7 +23,7 @@
 
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="30dp"
+            android:layout_height="wrap_content"
             android:id="@+id/hotel_image" />
 
 
@@ -41,14 +41,6 @@
             android:layout_below="@+id/telefone_hotel"
             android:text="" />
 
-
-        <ImageView
-            android:id="@+id/iv_rates"
-            android:layout_width="20sp"
-            android:layout_height="20sp"
-            android:layout_gravity="center"
-
-            android:src="@mipmap/patinha" />
 
 
     </LinearLayout>
