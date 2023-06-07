@@ -15,7 +15,7 @@
 
     <ImageView
         android:id="@+id/iv_tutor"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:src="@mipmap/tutor"
         android:layout_marginTop="100dp"
@@ -67,6 +67,7 @@
     <EditText
         android:id="@+id/et_email"
         android:layout_width="300sp"
+        android:maxLines="1"
         android:layout_height="wrap_content"
         android:hint="@string/hint_email"
         android:textSize="20sp"
@@ -86,6 +87,7 @@
     <EditText
         android:id="@+id/et_senha"
         android:layout_width="300sp"
+        android:maxLines="1"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:hint="@string/hint_senha"
@@ -106,6 +108,7 @@
     <EditText
         android:id="@+id/et_nome"
         android:layout_width="300sp"
+        android:maxLines="1"
         android:layout_height="wrap_content"
         android:hint="@string/hint_nome_tutor"
         android:textSize="20sp"
@@ -127,6 +130,7 @@
         android:id="@+id/et_documento"
         android:layout_width="300sp"
         android:layout_height="wrap_content"
+        android:maxLines="1"
         android:inputType="number"
         android:hint="@string/hint_documento_tutor"
         android:textSize="20sp"
@@ -146,6 +150,7 @@
         <EditText
             android:id="@+id/et_telefone"
             android:layout_width="300sp"
+            android:maxLines="1"
             android:layout_height="wrap_content"
             android:inputType="phone"
             android:hint="@string/hint_telefone"
@@ -165,7 +170,7 @@
         android:layout_below="@id/ll_form"
         android:text="@string/button_cadastro"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="sans-serif-medium"
         android:textSize="35dp"
         android:backgroundTint="#033180">

@@ -16,13 +16,16 @@
         android:layout_centerHorizontal="true"
         android:orientation="horizontal">
 
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/container"
-            tools:layout="@layout/fragment_app_name"
-            android:name="com.example.auular.fragments.AppName"
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/tv_appName"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            />
+            android:layout_marginTop="5dp"
+            android:text="@string/app_name"
+            android:layout_centerHorizontal="true"
+            android:textSize="40sp"
+            android:textColor="@color/azul_escuro"
+            android:layout_below="@id/img_erro"/>
     </LinearLayout>
 
     <ImageView

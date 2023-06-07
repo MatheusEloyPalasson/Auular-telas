@@ -22,14 +22,15 @@
 
     <ImageView
         android:id="@+id/iv_patinha"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/tv_auular"
-        android:src="@mipmap/patinha"></ImageView>
+        android:src="@mipmap/tutor"/>
 
     <EditText
         android:id="@+id/et_email"
+        android:layout_marginTop="30dp"
         android:layout_width="300sp"
         android:maxLines="1"
         android:inputType="text"

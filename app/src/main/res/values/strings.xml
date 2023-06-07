@@ -75,8 +75,10 @@
     <string name="tv_animais_imagens">Insira imagens de seu estabelecimento para mostrar aos seus novos clientes! (Formato PNG ou JPG)</string>
     <string name="tv_manter_conectado">Manter conectado neste dispositivo</string>
     <string name="tv_animais_deseja_email">Desejo receber conteúdos e promoções via e-mail</string>
-    <string name="tv_mensagem_erro">Pane no sistema, alguém me desconfigurou.</string>
+    <string name="tv_mensagem_erro">Ops! Parece que comeram alguns cabos...</string>
     <string name="tv_by_auular">Made by - Auular ©</string>
+    <string name="tv_confira">Confira os hotéis cadastrados na nossa plataforma!</string>
+    <string name="tv_descubra">Descubra os hotéis cadastrados na Auular!</string>
 
 
     <!-- Button !-->
